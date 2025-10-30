@@ -7,12 +7,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // ==============================
 // Mobile navigation toggle
 // ==============================
-const navToggle = document.getElementById('navToggle');
-const siteNav = document.getElementById('siteNav');
-navToggle.addEventListener('click', () => {
-  const open = siteNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-});
 
 // ==============================
 /* Tilt interaction (vanilla JS)
@@ -122,3 +116,9 @@ if(form){
     }
   });
 }
+
+
+
+
+
+
