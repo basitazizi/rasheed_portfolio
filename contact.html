@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rasheed Ghafoury — Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Favicon (simple data URI circle) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230AAA66'/%3E%3C/svg%3E">
+
+  </head>
+  <body>
+        <!-- Site Header / Navigation -->
+    <header class="site-header">
+      <a class="logo" href="index.html"><span class="logo-dot"></span>RG</a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <!-- Hamburger icon -->
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main class="section container contact">
+      <!-- Comment: Contact page with validated form and an embedded map -->
+      <header>
+        <h1 class="tilt">Contact</h1>
+        <p>Let's connect about writing, investing, leadership, and mentorship opportunities.</p>
+      </header>
+
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjkpoyzz" method="POST">
+          <!-- Comment: This form uses client-side validation. Replace with your backend later. -->
+          <label>Full Name
+            <input type="text" name="name" placeholder="Your name" required/>
+          </label>
+
+          <label>Email
+            <input type="email" name="email" placeholder="name@example.com" required/>
+          </label>
+
+          <label>Subject
+            <input type="text" name="subject" placeholder="Project, collaboration, etc." required/>
+          </label>
+
+          <label>Message
+            <textarea name="message" rows="6" placeholder="How can I help?" required></textarea>
+          </label>
+
+          <button type="submit" class="btn primary">Send Message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          
+        </form>
+
+
+        <div class="map-card tilt">
+          <h2>Fort Worth, Texas</h2>
+          <iframe
+            title="Fort Worth, TX — Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429746.5227202032!2d-97.6510584!3d32.7795412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e6e8ccd5f1a7b%3A0x42d7a0dfc864c8b!2sFort%20Worth%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000"
+            allowfullscreen=""></iframe>
+          <div class="contact-cards">
+            <a class="card link" href="mailto:rasheedghafoury@gmail.com">✉️ Email</a>
+            <a class="card link" href="tel:+16823603347">📞 (682) 360-3347</a>
+            <a class="card link" href="https://linkedin.com/in/rasheed-ghafoury" target="_blank" rel="noopener">in LinkedIn</a>
+            <a class="card link" href="https://medium.com/@rasheedghafoury" target="_blank" rel="noopener">M Medium</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-actions">
+        <a class="btn ghost" href="index.html">← Back Home</a>
+        <a class="btn ghost" href="resume.html">Resume</a>
+      </div>
+    </main>
+        <footer class="site-footer">
+      <p>© <span id="year"></span> Rasheed Ghafoury • Fort Worth, TX</p>
+      <div class="socials">
+        <a href="mailto:rasheedghafoury@gmail.com" aria-label="Email">✉️</a>
+        <a href="https://linkedin.com/in/rasheed-ghafoury" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://medium.com/@rasheedghafoury" target="_blank" rel="noopener" aria-label="Medium">M</a>
+        <a href="https://dot.cards/rasheedghafoury" target="_blank" rel="noopener" aria-label="Portfolio Card">◈</a>
+      </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
