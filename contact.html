@@ -1,65 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rasheed Ghafoury — Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Favicon (simple data URI circle) -->
+    <title>Contact — Rasheed Ghafoury</title>
+    <!-- Google Fonts: Poppins for improved readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Combined stylesheet -->
+    <!-- Use root-level stylesheet -->
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230AAA66'/%3E%3C/svg%3E">
-
   </head>
   <body>
-        <!-- Site Header / Navigation -->
-    <header class="site-header">
-      <a class="logo" href="index.html"><span class="logo-dot"></span>RG</a>
-      <nav class="site-nav" id="siteNav">
+    <!-- Grid background behind contact content -->
+    <div class="grid-bg" aria-hidden="true"></div>
+    <!-- Fixed header with navigation -->
+    <header class="rg-site-header">
+      <a class="rg-logo" href="index.html">Rasheed Ghafoury<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="rg-nav">
         <a href="index.html">Home</a>
         <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <!-- Hamburger icon -->
-        <span></span><span></span><span></span>
-      </button>
     </header>
-    <div class="nav-backdrop" id="navBackdrop"></div>
 
     <main class="section container contact">
-      <!-- Comment: Contact page with validated form and an embedded map -->
+      <!-- Page title and intro -->
       <header>
-        <h1 class="tilt">Contact</h1>
+        <h1 class="section-title">Contact</h1>
         <p>Let’s connect to share ideas, grow, and create value together.</p>
       </header>
 
       <div class="contact-grid">
+        <!-- Contact form -->
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjkpoyzz" method="POST">
-          <!-- Comment: This form uses client-side validation. Replace with your backend later. -->
           <label>Full Name
-            <input type="text" name="name" placeholder="Your name" required/>
+            <input type="text" name="name" placeholder="Your name" required />
           </label>
-
           <label>Email
-            <input type="email" name="email" placeholder="name@example.com" required/>
+            <input type="email" name="email" placeholder="name@example.com" required />
           </label>
-
           <label>Subject
-            <input type="text" name="subject" placeholder="Project, collaboration, etc." required/>
+            <input type="text" name="subject" placeholder="Project, collaboration, etc." required />
           </label>
-
           <label>Message
             <textarea name="message" rows="6" placeholder="How can I help?" required></textarea>
           </label>
-
           <button type="submit" class="btn primary">Send Message</button>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-          
         </form>
 
-
+        <!-- Map and contact cards -->
         <div class="map-card tilt">
           <h2>United States</h2>
           <iframe
@@ -70,7 +62,7 @@
             allowfullscreen=""></iframe>
           <div class="contact-cards">
             <a class="card link" href="mailto:rasheedghafoury@gmail.com">✉️ Email</a>
-            <a class="card link" href="tel:+16823603347"> +1 (682) 360-3347</a>
+            <a class="card link" href="tel:+16823603347"> +1 (682) 360‑3347</a>
             <a class="card link" href="https://linkedin.com/in/rasheed-ghafoury" target="_blank" rel="noopener">in LinkedIn</a>
             <a class="card link" href="https://medium.com/@rasheedghafoury" target="_blank" rel="noopener">M Medium</a>
           </div>
@@ -82,8 +74,9 @@
         <a class="btn ghost" href="resume.html">Resume</a>
       </div>
     </main>
-        <footer class="site-footer">
-      <p>© <span id="year"></span> Rasheed Ghafoury </p>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Rasheed Ghafoury</p>
       <div class="socials">
         <a href="mailto:rasheedghafoury@gmail.com" aria-label="Email">✉️</a>
         <a href="https://linkedin.com/in/rasheed-ghafoury" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
@@ -91,7 +84,8 @@
         <a href="https://dot.cards/rasheedghafoury" target="_blank" rel="noopener" aria-label="Business Card">◈</a>
       </div>
     </footer>
-    <script src="assets/js/main.js"></script>
 
+    <!-- Load main JavaScript bundle (tilt, typewriter, contact, candles) -->
+    <script src="main.js"></script>
   </body>
 </html>

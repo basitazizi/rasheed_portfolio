@@ -4,105 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rasheed Ghafoury — Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Favicon (simple data URI circle) -->
+    <!-- Google Fonts: Poppins for improved readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Combined stylesheet (base + custom home) -->
+    <!-- Use root-level stylesheet for all pages -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon: simple green dot -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230AAA66'/%3E%3C/svg%3E">
-
   </head>
   <body>
-    <!-- Site Header / Navigation -->
-    <header class="site-header">
-      <a class="logo" href="index.html"><span class="logo-dot"></span>RG</a>
-      <nav class="site-nav" id="siteNav">
-        <a href="index.html">Home</a>
+    <!-- Animated candlestick canvas and vignette overlay -->
+    <canvas id="rg-market-bg" aria-hidden="true"></canvas>
+    <div id="rg-vignette" aria-hidden="true"></div>
+
+    <!-- Site header with navigation -->
+    <header class="rg-site-header">
+      <a class="rg-logo" href="index.html">Rasheed Ghafoury<span>.</span></a>
+      <!-- Mobile menu toggle (hidden on desktop via CSS) -->
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="rg-nav">
+        <a href="index.html" class="active">Home</a>
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <!-- Hamburger icon -->
-        <span></span><span></span><span></span>
-      </button>
     </header>
-    <div class="nav-backdrop" id="navBackdrop"></div>
 
-    <!-- Decorative moving gradient lines background -->
-    <div class="bg-lines" aria-hidden="true">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-
-    <!-- HERO -->
-    <section class="hero section">
-      <!-- Comment: The hero contains name, animated titles, and CTA buttons -->
-      <div class="hero-inner container">
-        <div class="hero-copy">
-          <h1 class="tilt">Rasheed Ghafoury</h1>
-          <p class="typewriter" data-text='Writer • Investor • Advisor • Leader • Customer Service Professional'></p>
-          <p class="lede">Multifaceted writer, investor, and business leader with expertise in investments, mentorship, and customer relations. Proven success in achieving consistent portfolio profitability, enhancing corporate performance, and mentoring students internationally toward academic and career growth. Dedicated to strategic leadership, operational excellence, and empowering others through communication, education, and innovation. </p>
-          <div class="cta">
-            <a class="btn primary" href="resume.html">View Resume</a>
-            <a class="btn ghost" href="contact.html">Contact</a>
+    <!-- Main content area for the home page -->
+    <main id="rg-home">
+      <!-- Hero layout: description and writer panel -->
+      <section class="rg-hero-grid">
+        <div>
+          <h1 class="rg-hero-title">Rasheed Ghafoury</h1>
+          <!-- Wrap the hero description in a dark box to improve legibility -->
+          <div class="rg-hero-desc">
+            <p class="rg-hero-sub">
+              Multifaceted writer, investor, and business leader with expertise in investments, mentorship, and customer relations.
+              Proven success in achieving consistent portfolio profitability, enhancing corporate performance, and mentoring students
+              internationally toward academic and career growth. Dedicated to strategic leadership, operational excellence, and
+              empowering others through communication, education, and innovation.
+            </p>
           </div>
-          <div class="metrics">
-            <div class="metric-card" data-reveal>
-              <span class="metric">7%+</span>
-              <span class="label">Avg. Monthly Capital Gain</span>
-            </div>
-            <div class="metric-card" data-reveal>
-              <span class="metric">98%</span>
-              <span class="label">Audit Accuracy (Franchise)</span>
-            </div>
-            <div class="metric-card" data-reveal>
-              <span class="metric">100+</span>
-              <span class="label">Team Members Managed</span>
-            </div>
+          <div class="rg-btn-row">
+            <a class="rg-btn rg-btn-primary" href="resume.html">View Resume</a>
           </div>
         </div>
-        <div class="hero-card tilt" data-reveal>
-          <!-- Comment: Summary highlight card -->
-          <div class="hero-card-inner">
-            <h3>As an active writer</h3>
-            <ul>
-              <li>Currently writing flash nonfiction pieces that explore philosophy, investing, mindset, success, and critical thinking.</li>
-
-            </ul>
-            <a class="btn link" href="https://medium.com/@rasheedghafoury" target="_blank" rel="noopener">Read my writing →</a>
+        <div class="rg-panel">
+          <h3>As an active writer</h3>
+          <ul>
+            <li>Currently writing flash nonfiction pieces that explore philosophy, investing, mindset, success, and critical thinking.</li>
+          </ul>
+          <div class="rg-panel-cta">
+            <a class="rg-btn rg-btn-primary" href="https://medium.com/@rasheedghafoury" target="_blank" rel="noopener">Read my writing →</a>
           </div>
         </div>
-      </div>
-      <!-- Floating orbs for gentle motion -->
-      <div class="orb orb-a"></div>
-      <div class="orb orb-b"></div>
-    </section>
+      </section>
 
-    <!-- EXPERIENCE HIGHLIGHTS -->
+      <!-- Stats section highlighting key metrics -->
+      <section class="rg-stats">
+        <div class="rg-stat tilt">
+          <h4>7%+</h4>
+          <p>Avg. Monthly Capital Gain</p>
+        </div>
+        <div class="rg-stat tilt">
+          <h4>98%</h4>
+          <p>Audit Accuracy (Franchise)</p>
+        </div>
+        <div class="rg-stat tilt">
+          <h4>100+</h4>
+          <p>Team Members Managed</p>
+        </div>
+      </section>
+
+      <!-- Scrim overlay for readability over the background -->
+      <div class="rg-scrim" aria-hidden="true"></div>
+    </main>
+
+    <!-- Highlights section (interactive cards) -->
     <section class="section container">
       <h2 class="section-title">Highlights</h2>
       <div class="cards">
-        <article class="card tilt" data-reveal>
+        <article class="card tilt">
           <h3>Investments</h3>
-          <p>Value & potential stocks, ETFs, and crypto using market & limit orders, consistently averaging 7%+ monthly returns while setting multiple record days.</p>
+          <p>Value &amp; potential stocks, ETFs, and crypto using market &amp; limit orders, consistently averaging 7%+ monthly returns while setting multiple record days.</p>
           <a class="btn small" href="resume.html#investment">See details</a>
         </article>
-        <article class="card tilt" data-reveal>
+        <article class="card tilt">
           <h3>Leadership</h3>
           <p>General Manager at Jersey Mike’s, cutting food and labor costs, and managing full ops (scheduling, payroll, inventory) across 100+ staff.</p>
           <a class="btn small" href="resume.html#experience">Experience</a>
         </article>
-        <article class="card tilt" data-reveal>
+        <article class="card tilt">
           <h3>Mentorship</h3>
           <p>Active UStrive mentor (Amex-supported), guiding students on academic pathways, resumes, and job readiness.</p>
-          <a class="btn small" href="resume.html#mentorship">Mentoring</a>
+          <a class="btn small" href="resume.html#skills">Mentoring</a>
         </article>
       </div>
     </section>
 
-    <!-- CONTACT PREVIEW -->
+    <!-- Contact preview section -->
     <section class="section container">
       <div class="contact-preview">
         <div>
@@ -113,21 +112,17 @@
           title="United States — Map"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=United+States&hl=en&z=4&t=m&output=embed"
+          src="https://www.google.com/maps?q=United+States&amp;hl=en&amp;z=4&amp;t=m&amp;output=embed"
           allowfullscreen=""></iframe>
       </div>
     </section>
 
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Rasheed Ghafoury </p>
-      <div class="socials">
-        <a href="mailto:rasheedghafoury@gmail.com" aria-label="Email">✉️</a>
-        <a href="https://linkedin.com/in/rasheed-ghafoury" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-        <a href="https://medium.com/@rasheedghafoury" target="_blank" rel="noopener" aria-label="Medium">M</a>
-        <a href="https://dot.cards/rasheedghafoury" target="_blank" rel="noopener" aria-label="Business Card">◈</a>
-      </div>
+    <!-- Footer with dynamic year -->
+    <footer class="rg-footer">
+      © <span id="year"></span> Rasheed Ghafoury. All rights reserved.
     </footer>
-    <script src="assets/js/main.js"></script>
 
+    <!-- Main JavaScript bundle including canvas animation -->
+    <script src="main.js"></script>
   </body>
 </html>
