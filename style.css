@@ -1,5 +1,5 @@
 /*
- * Combined base styles and custom home page styling for Rasheed Ghafoury’s portfolio.
+ * Combined base styles and custom home page styling for Rasheed Ghafoury's portfolio.
  *
  * This stylesheet starts with the original theme variables and component styles
  * provided by the user, ensuring that the resume and contact pages maintain
@@ -31,10 +31,10 @@ body{
   /* Use a cleaner, more legible font stack. Poppins offers rounded
      letterforms and improved readability on smaller screens. */
   font-family: "Poppins", Inter, system-ui, -apple-system, Segoe UI, Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   color: var(--text);
   background: radial-gradient(1200px 800px at 20% -10%, #0a2a1d 0%, #0b0c0b 40%),
-    var(--bg);
+  var(--bg);
   overflow-x: hidden;
 }
 
@@ -208,8 +208,8 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
   /* Use the same layered box shadow as other boxes to add green
      and red glows, creating a cohesive 3D effect. */
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45),
-              0 0 32px rgba(48, 224, 122, 0.18),
-              0 0 32px rgba(255, 74, 92, 0.18);
+  0 0 32px rgba(48, 224, 122, 0.18),
+  0 0 32px rgba(255, 74, 92, 0.18);
 }
 .profile-card .title{ margin: 8px 0 14px; color: var(--muted); }
 .profile-list{ display:grid; gap:10px; margin: 10px 0 0; }
@@ -231,8 +231,8 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
      to tie into the overall palette. Adjust opacity to keep the effect
      tasteful and non‑distracting. */
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45),
-              0 0 32px rgba(48, 224, 122, 0.18),
-              0 0 32px rgba(255, 74, 92, 0.18);
+  0 0 32px rgba(48, 224, 122, 0.18),
+  0 0 32px rgba(255, 74, 92, 0.18);
   margin-bottom: 18px;
 }
 .box h2{ margin: 0 0 8px; }
@@ -260,12 +260,12 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
   pointer-events: none;
   background:
     /* vertical and horizontal grid lines */
-    repeating-linear-gradient(to right, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 80px),
-    repeating-linear-gradient(to bottom, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 80px),
-    /* green glow top-left */
-    radial-gradient(1200px 800px at 25% 10%, rgba(48,224,122,0.08), transparent 60%),
-    /* red glow bottom-right */
-    radial-gradient(1200px 800px at 80% 110%, rgba(255,74,92,0.08), transparent 60%);
+          repeating-linear-gradient(to right, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 80px),
+          repeating-linear-gradient(to bottom, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 80px),
+            /* green glow top-left */
+          radial-gradient(1200px 800px at 25% 10%, rgba(48,224,122,0.08), transparent 60%),
+            /* red glow bottom-right */
+          radial-gradient(1200px 800px at 80% 110%, rgba(255,74,92,0.08), transparent 60%);
 }
 
 /*
@@ -316,8 +316,8 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(1200px 800px at 50% 50%, rgba(48,224,122,0.12), transparent 60%),
-    radial-gradient(1200px 800px at 50% 100%, rgba(255,74,92,0.12), transparent 60%);
+          radial-gradient(1200px 800px at 50% 50%, rgba(48,224,122,0.12), transparent 60%),
+          radial-gradient(1200px 800px at 50% 100%, rgba(255,74,92,0.12), transparent 60%);
 }
 
 /* Fixed header for home and other pages (merged) */
@@ -379,48 +379,49 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
   .rg-nav a{ padding: 8px 10px; font-size: 0.85rem; }
 }
 
-/* Responsive navigation: on narrow screens, wrap links to prevent
-   truncation. Reduce font size and padding so that “Contact” remains
-   fully visible. */
-@media (max-width: 600px){
-  .rg-nav{
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: flex-start;
-  }
-  .rg-nav a{
-    font-size: 0.85rem;
-    padding: 6px 10px;
-  }
-}
-
-/* Hero layout */
+/* Hero layout - UPDATED WITH MORE SPACING */
 #rg-home{
   position: relative;
-  padding-top: 12vh;
-  padding-bottom: 8vh;
+  padding-top: 14vh; /* Increased from 12vh */
+  padding-bottom: 10vh; /* Increased from 8vh */
   color: var(--rg-white);
 }
-/* Home hero grid
- * The left column contains the title and description; the right column
- * holds the writer panel. To emphasise the main content and shrink
- * the side card, the grid proportions allocate more space to the left
- * (1.5fr) and less to the right (0.5fr). On small screens the layout
- * collapses to a single column. */
+
+/* Home hero grid - UPDATED WITH MORE SPACING */
 .rg-hero-grid{
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.5fr 0.5fr;
-  gap: 40px;
+  gap: 50px; /* Increased from 40px */
 }
-@media (max-width: 900px){ .rg-hero-grid{ grid-template-columns: 1fr; } }
+@media (max-width: 900px){
+  .rg-hero-grid{
+    grid-template-columns: 1fr;
+    gap: 40px; /* More spacing on mobile too */
+  }
+}
 
 .rg-hero-title{
   font-size: clamp(2.2rem, 6vw, 5rem);
-  margin: 0;
+  margin: 0 0 2rem 0; /* Added bottom margin */
   line-height: 1.05;
   text-shadow: 0 4px 18px rgba(0,0,0,0.6);
+}
+
+/* UPDATED - More spacing in description box */
+.rg-hero-desc{
+  background: rgba(0,0,0,0.65);
+  padding: 28px; /* Increased from 20px */
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  max-width: 60ch;
+  margin-bottom: 2.5rem; /* Increased from implicit spacing */
+}
+.rg-hero-desc p{
+  margin: 0;
+  line-height: 1.7; /* Added for better readability */
 }
 
 .rg-hero-sub{
@@ -431,7 +432,13 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
   text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 
-.rg-btn-row{ display:flex; gap: 14px; flex-wrap: wrap; }
+.rg-btn-row{
+  display:flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 2rem; /* Added explicit top margin */
+}
+
 .rg-btn{
   display: inline-block;
   padding: 14px 20px;
@@ -467,20 +474,25 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
 .rg-panel ul{ margin: 0 0 16px 1rem; padding: 0; color: #cfe8db; }
 .rg-panel-cta{ margin-top: 12px; }
 
-/* Stats section */
+/* Stats section - UPDATED WITH MORE SPACING */
 .rg-stats{
   max-width: 1100px;
-  margin: 2rem auto 0;
+  margin: 4rem auto 0; /* Increased from 2rem */
   display:grid;
-  gap: 20px;
+  gap: 24px; /* Increased from 20px */
   grid-template-columns: repeat(3,1fr);
 }
-@media (max-width: 800px){ .rg-stats{ grid-template-columns: 1fr; } }
+@media (max-width: 800px){
+  .rg-stats{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 .rg-stat{
   background: rgba(0,0,0,0.70);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 20px;
-  padding: 20px 24px;
+  padding: 24px 28px; /* Increased padding */
   backdrop-filter: blur(10px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.4);
 }
@@ -490,7 +502,7 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
   color: var(--rg-green);
 }
 .rg-stat p{
-  margin: 6px 0 0;
+  margin: 8px 0 0; /* Increased from 6px */
   color: #cfe8db;
 }
 
@@ -509,15 +521,92 @@ main a:hover{ color: var(--green); border-bottom-color: rgba(10,170,102,.7); }
   background: radial-gradient(1000px 600px at 20% 40%, rgba(0,0,0,0.6), transparent 60%);
 }
 
-/* Box around the hero description to improve legibility over the moving candles */
-.rg-hero-desc{
-  background: rgba(0,0,0,0.65);
-  padding: 20px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  max-width: 60ch;
+/* MOBILE-SPECIFIC IMPROVEMENTS */
+@media (max-width: 600px){
+  /* More vertical spacing on mobile homepage */
+  #rg-home{
+    padding-top: 120px; /* More space below header */
+    padding-bottom: 60px;
+  }
+
+  .rg-hero-title{
+    margin-bottom: 1.5rem;
+  }
+
+  .rg-hero-desc{
+    padding: 24px;
+    margin-bottom: 2rem;
+  }
+
+  .rg-btn-row{
+    margin-top: 1.5rem;
+  }
+
+  /* Ensure stats have good spacing on mobile */
+  .rg-stats{
+    margin-top: 3rem;
+    gap: 18px;
+  }
+
+  /* Resume page - add space below header */
+  .resume{
+    padding-top: 100px; /* Space below fixed header */
+  }
+
+  /* Resume title spacing */
+  .resume .section-title{
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  /* CONTACT PAGE - add space below header */
+  .contact{
+    padding-top: 100px; /* Space below fixed header */
+  }
+
+  /* Contact title and intro spacing */
+  .contact header h1{
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .contact header p{
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
 }
-.rg-hero-desc p{
-  margin: 0;
+
+/* Additional mobile spacing for resume sections */
+@media (max-width: 900px){
+  .resume .section-title{
+    margin-top: 20px;
+  }
+
+  .resume-main{
+    gap: 28px; /* More gap between profile and content */
+  }
+
+  /* Contact page spacing on tablets/mobile */
+  .contact header{
+    margin-bottom: 28px;
+  }
+
+  .contact .section-title{
+    margin-top: 20px;
+  }
+}
+
+/* Desktop contact page improvements */
+@media (min-width: 601px){
+  .contact{
+    padding-top: 100px; /* Space below fixed header on desktop too */
+  }
+
+  .contact header{
+    margin-bottom: 32px;
+  }
+
+  .contact header h1{
+    margin-bottom: 16px;
+  }
 }
